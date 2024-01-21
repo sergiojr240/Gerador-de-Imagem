@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processar Imagem</title>
+</head>
+<body>
+    <h2>Upload de Imagem</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <label for="tipo_estrategia">Escolha a estratégia:</label>
+        <select name="tipo_estrategia" id="tipo_estrategia">
+            <option value="fotogrametria">Fotogrametria</option>
+            <option value="segmentacao">Segmentação</option>
+        </select>
+        <button type="submit">Processar</button>
+    </form>
+</body>
+</html>
+
